@@ -8,28 +8,35 @@ hodorly_decree = ''
 def hodorify_syllables(word):
 
   new_word = ''
+  index = 0
 
   #count syllables in each word
   syl_count = int(textstat.syllable_count(word))
 
   #for each syllable of the word, print a ho-dor syllable
-  for index in range(0,syl_count):
+  for syl_index in range(0,syl_count):
 
-    hodex = index % (len(hodorian_syllables)-1)
+    hodex = syl_index % (len(hodorian_syllables)-1)
+    dordex = 0
 
-    if not word[index].isalpha():
-      new_word += word[index]
+    for dordex in range(0,len(hodorian_syllables[0])):
+      if not word[index+dordex].isalpha():
+        new_word += word[index+dordex]
 
-    elif word[index].isupper():
-      new_word += hodorian_syllables[hodex]
+      elif word[index+dordex].isupper():
+        new_word += hodorian_syllables[hodex][dordex].upper()
 
-    else:
-      new_word += hodorian_syllables[hodex].lower()
+      else:
+        new_word += hodorian_syllables[hodex][dordex].lower()
+      
+    index += len(hodorian_syllables[0])
 
   #only print the final r at the end of the word
   if hodex == 1:
-    new_word += hodorian_syllables[2]
-
+    if word[index].isupper():
+      new_word += hodorian_syllables[2].upper()
+    else:
+      new_word += hodorian_syllables[2]
   return(new_word)
 
 #takes in a word, returns the hodorically-correct hodor
