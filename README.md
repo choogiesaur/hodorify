@@ -3,7 +3,7 @@ hodor? hodor.
 
 This is an app that translates an English sentence into a Hodorly Decree.
 
-example usage:
+##example usage:
 
 python hodor.py
 
