@@ -8,17 +8,24 @@ def hodorify_word(word):
 		
 		hodex = index % 5
 
-		if word[index].isupper():
+		if not word[index].isalpha():
+			new_word += word[index]
+		elif word[index].isupper():
 			new_word += hodorian_cycle[hodex].upper()
 		else:
 			new_word += hodorian_cycle[hodex]
 
-	print(new_word)
+	print(word + ' ----> ' + new_word)
+	return(new_word)
 
-dictum = input("Enter text to be dictated by his Hodorliness: ")
+dictum = input("Enter text to be dictated by his Hodorliness: \n")
 
 words = str.split(dictum)
-hodorlyDecree = []
 
+hodorly_decree = ''
+
+print('Words: \n')
 for word in words:
-	hodorify_word(word)
+	hodorly_decree += hodorify_word(word) + ' '
+
+print('Hodorly Decree: \n' + str(hodorly_decree))
