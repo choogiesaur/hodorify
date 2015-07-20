@@ -1,5 +1,7 @@
 hodorian_cycle = ['h', 'o', 'd', 'o', 'r']
+hodorly_decree = ''
 
+#takes in a word, returns the hodorically-correct hodor
 def hodorify_word(word):
 
 	new_word = ''
@@ -20,7 +22,6 @@ def hodorify_word(word):
 	return(new_word)
 
 dictum = str.split(input("\nEnter text to be dictated by his Hodorliness: \n"))
-hodorly_decree = ''
 
 for word in dictum:
 	hodorly_decree += hodorify_word(word) + ' '
