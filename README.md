@@ -7,10 +7,10 @@ This is an app that translates an English sentence into a Hodorly Decree.
 
 python hodor.py
 
-Enter the text to be dictated by his Hodorliness:
+> Enter the text to be dictated by his Hodorliness:
 
-Hello, my name is chika chika slim SHADY!
+> Hello, my name is chika chika slim SHADY!
 
-His Hodorly Decree:
+> His Hodorly Decree:
 
-Hodor, ho hodo ho hodor hodor hodo HODOR!
+> Hodor, ho hodo ho hodor hodor hodo HODOR!
