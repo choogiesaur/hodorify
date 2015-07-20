@@ -4,26 +4,26 @@ hodorly_decree = ''
 #takes in a word, returns the hodorically-correct hodor
 def hodorify_word(word):
 
-	new_word = ''
+  new_word = ''
 
-	for index in range(0,len(word)):
-		
-		hodex = index % 5
+  for index in range(0,len(word)):
 
-		if not word[index].isalpha():
-			new_word += word[index]
+    hodex = index % 5
 
-		elif word[index].isupper():
-			new_word += hodorian_cycle[hodex].upper()
-			
-		else:
-			new_word += hodorian_cycle[hodex]
+    if not word[index].isalpha():
+      new_word += word[index]
 
-	return(new_word)
+    elif word[index].isupper():
+      new_word += hodorian_cycle[hodex].upper()
 
-dictum = str.split(input("\nEnter text to be dictated by his Hodorliness: \n"))
+    else:
+      new_word += hodorian_cycle[hodex]
+
+  return(new_word)
+
+dictum = str.split(raw_input("\nEnter text to be dictated by his Hodorliness: \n"))
 
 for word in dictum:
-	hodorly_decree += hodorify_word(word) + ' '
+  hodorly_decree += hodorify_word(word) + ' '
 
 print('\nHodorly Decree: \n' + str(hodorly_decree))
