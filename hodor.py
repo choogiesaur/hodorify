@@ -1,6 +1,6 @@
 from textstat.textstat import textstat
 
-hodorian_syllables = ['Ho', 'dor']
+hodorian_syllables = ['Ho', 'do', 'r']
 hodorian_cycle = ['h','o','d','o','r']
 hodorly_decree = ''
 
@@ -12,9 +12,10 @@ def hodorify_syllables(word):
   #count syllables in each word
   syl_count = int(textstat.syllable_count(word))
 
+  #for each syllable of the word, print a ho-dor syllable
   for index in range(0,syl_count):
 
-    hodex = index % 2
+    hodex = index % (len(hodorian_syllables)-1)
 
     if not word[index].isalpha():
       new_word += word[index]
@@ -24,6 +25,10 @@ def hodorify_syllables(word):
 
     else:
       new_word += hodorian_syllables[hodex].lower()
+
+  #only print the final r at the end of the word
+  if hodex == 1:
+    new_word += hodorian_syllables[2]
 
   return(new_word)
 
