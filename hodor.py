@@ -13,6 +13,22 @@ def hodorify_syllables(word):
   #count syllables in each word
   syl_count = int(textstat.syllable_count(word))
 
+  #get initial and final punctuation
+  word_start = 0
+  for word_start in range(0,len(word)):
+    if word[word_start].isalpha():
+      break
+
+  word_end = len(word)
+  for word_end in range(len(word),1,-1):
+    if word[word_end-1].isalpha():
+      break  
+
+  #split word from punctutation
+  pre_text = word[:word_start]
+  post_text = word[word_end:]
+  word = word[word_start:word_end]
+
   #for each syllable of the word, print a ho-dor syllable
   for syl_index in range(0,syl_count):
 
@@ -20,10 +36,7 @@ def hodorify_syllables(word):
     dordex = 0
 
     for dordex in range(0,len(hodorian_syllables[0])):
-      if not word[index+dordex].isalpha():
-        new_word += word[index+dordex]
-
-      elif word[index+dordex].isupper():
+      if word[index+dordex].isupper():
         new_word += hodorian_syllables[hodex][dordex].upper()
 
       else:
@@ -37,7 +50,7 @@ def hodorify_syllables(word):
       new_word += hodorian_syllables[2].upper()
     else:
       new_word += hodorian_syllables[2]
-  return(new_word)
+  return(pre_text+new_word+post_text)
 
 #takes in a word, returns the hodorically-correct hodor
 def hodorify_word(word):
