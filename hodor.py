@@ -63,10 +63,8 @@ def hodorify_word(word):
 
     if not word[index].isalpha():
       new_word += word[index]
-
     elif word[index].isupper():
       new_word += hodorian_cycle[hodex].upper()
-
     else:
       new_word += hodorian_cycle[hodex]
 
