@@ -1,7 +1,7 @@
 # hodorify
 hodor? hodor.
 
-This is an app that translates an English sentence into a Hodorly Decree.
+This is a script that translates an English sentence into a Hodorly Decree.
 
 ##example usage:
 
