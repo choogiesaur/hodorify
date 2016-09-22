@@ -25,15 +25,15 @@ def hodorify_syllables(word):
       break  
 
   #split word from punctutation
-  pre_text = word[:word_start]
+  pre_text  = word[:word_start]
   post_text = word[word_end:]
-  word = word[word_start:word_end]
+  word      = word[word_start:word_end]
 
   #for each syllable of the word, print a ho-dor syllable
   for syl_index in range(0,syl_count):
 
-    hodex = syl_index % (len(hodorian_syllables)-1)
-    dordex = 0
+    hodex   = syl_index % (len(hodorian_syllables)-1)
+    dordex  = 0
 
     for dordex in range(0,len(hodorian_syllables[0])):
       if word[index+dordex].isupper():
