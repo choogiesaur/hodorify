@@ -1,8 +1,8 @@
 from textstat.textstat import textstat
 
-hodorian_syllables = ['Ho', 'do', 'r']
-hodorian_cycle = ['h','o','d','o','r']
-hodorly_decree = ''
+hodorian_syllables  = ['Ho', 'do', 'r']
+hodorian_cycle      = ['h','o','d','o','r']
+hodorly_decree      = ''
 
 #takes in a word, returns the hodorically-correct hodor syllables
 def hodorify_syllables(word):
@@ -52,7 +52,7 @@ def hodorify_syllables(word):
       new_word += hodorian_syllables[2]
   return(pre_text+new_word+post_text)
 
-#takes in a word, returns the hodorically-correct hodor
+#takes in a word, returns the hodorically-correct hodorism
 def hodorify_word(word):
 
   new_word = ''
