@@ -3,7 +3,7 @@ hodor? hodor.
 
 This is a script that translates an English sentence into a Hodorly Decree. Now supports hodorification by syllables via textstat.
 
-##example usage:
+## Example usage:
 
 > python hodor.py
 
